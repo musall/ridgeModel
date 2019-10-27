@@ -28,8 +28,13 @@ Lastly, the tutorial shows how to run cross-validation using the 'crossValModel'
 # Other code, related to the paper
 
 The repo also includes other functions that were either used in the paper or somewhat simplified to provide an intuition of the neural data in general. They are located in the 'delayedDetection' folder.
+
 'delayDec_rebuildAvg' creates average responses of the widefield data for different times in the behavioral paradigm. It also creates d' maps for choice and sensory modality.
+
 'delayDec_regressModel' is the model that was used in the paper. All its functionality is also included in the tutorial.
-'delayDec_compareRegressors' compares cvR^2 and dR^2 for different model variables, creates plots that show increased spatial specificity for dR^2 over cvR^2 and computes dR^2  for each time point in the trial.
+
+'delayDec_compareRegressors' compares cvR² and dR² for different model variables, creates plots that show increased spatial specificity for dR² over cvR² and computes dR² for each time point in the trial.
+
 'delayDec_compare2pRegressors' is mostly similar to 'delayDec_compareRegressors' but is used for 2-photon data.
+
 'delayDec_Neuropixels' fits a simplified version of the linear model to Neuropixels recordings in awake mice during visual stimulation. Subsequently, use 'delayDec_NeuropixelsResults' to visualize the results.
