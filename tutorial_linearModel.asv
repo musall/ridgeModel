@@ -73,9 +73,7 @@ regLabels = [taskLabels, moveLabels];
 % The resulting plot ranges from 0 to 1 for each regressor, with 1 being
 % fully orthogonal to all preceeding regressors in the matrix and 0 being
 % fully redundant. Having fully redundant regressors in the matrix will
-% break the model, so in this example those regressors are removed. In
-% practice, you should understand where the redundancy is coming from and
-% change your model design to avoid it in the first place!
+% break the model, so in this example those 
 
 rejIdx = false(1,size(fullR,2));
 [~, fullQRR] = qr(bsxfun(@rdivide,fullR,sqrt(sum(fullR.^2))),0); %orthogonalize normalized design matrix
