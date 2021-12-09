@@ -658,6 +658,7 @@ function SaveMovie_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 [fName,fPath] = uiputfile('*.avi', 'Enter filename');
+frameRate = str2double(inputdlg({'Enter the framerate for movie file'},'',1));
 
 try
 cMap = str2func(strtrim(handles.pickColormap.String{handles.pickColormap.Value}));
@@ -669,7 +670,7 @@ imgScale = 2; %scale video if requried
 % v.Colormap = C;
 v = VideoWriter([fPath fName]);
 % v = VideoWriter([fPath fName], 'MPEG-4');
-v.FrameRate = str2double(inputdlg({'Enter the framerate for movie file'},'',1));
+v.FrameRate = frameRate;
 open(v);
 
 for iFrames = 1:size(handles.UserData.Frames{handles.movieSelect.Value},3)

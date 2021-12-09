@@ -10,7 +10,7 @@ function im = alignAllenTransIm(im, transParams)
 % Pixels where the value is not defined (due to rotation) are set to NaN.
 % This behavior is different from imrotate.
 
-offset = 5E3;
+offset = 1E3;
 
 [h, w, d] = size(im);
 
