@@ -1,4 +1,4 @@
-function [dMat, traceOut] = Widefield_analogToDesign(traceIn, stdThresh, trialCnt, sourceRate, targRate, motorIdx, gaussShift)
+function [dMat, traceOut] = delayDec_analogToDesign(traceIn, stdThresh, trialCnt, sourceRate, targRate, motorIdx, gaussShift)
 % code to create a peri-event design matrix based on an analog trace. Trace
 % should be continous and will be reshaped into a trial structure to create
 % a design matrix for every trial individually.

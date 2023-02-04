@@ -166,7 +166,7 @@ for iUnits = 1 : size(sp.cgs,2)
     cData(cData > dataCut / sRate) = [];
     spikeTrace(:, iUnits) = histcounts(cData, 0 : 1/sRate : dataCut / sRate );
 end
-spikeTrace = smoothCol(spikeTrace, 5, 'gauss'); %do some smoothing
+spikeTrace = smoothCol(spikeTrace, 1, 5, 'gauss'); %do some smoothing
 spikeTrace = bsxfun(@minus, spikeTrace, mean(spikeTrace)); %make zero-mean
 save([fPath 'spikeTrace.mat'], 'spikeTrace');
 
